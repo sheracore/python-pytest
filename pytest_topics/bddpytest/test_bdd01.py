@@ -13,10 +13,13 @@ def pytest_configure():  #global variable
     pytest.AMT = 0
 
 
-@scenario(FEATURE_FILE_PATH, 'Withdrawal of money')
-def test_withdrawal():
-    print("End of withdeawal test")
-    pass
+scenarios(FEATURE_FILE_PATH)
+
+
+# @scenario(FEATURE_FILE_PATH, 'Withdrawal of money')
+# def test_withdrawal():
+#     print("End of withdeawal test")
+#     pass
 
 
 @given('the account balance is 100')
@@ -34,9 +37,9 @@ def final_balance():
     assert pytest.AMT == 70
 
 
-@scenario(FEATURE_FILE_PATH,'Removal of items from set')
-def test_remove_of_items():
-    pass
+# @scenario(FEATURE_FILE_PATH,'Removal of items from set')
+# def test_remove_of_items():
+#     pass
 
 
 @given('A set of 3 fruits', target_fixture="my_set")
@@ -50,6 +53,6 @@ def remove_fruit(my_set):
     print(my_set)
 
 
-@then('the set will have 2 fruits')
+@then('the set should have 5 elements')
 def final_set(my_set):
     assert len(my_set) == 2
