@@ -1,7 +1,7 @@
 import pytest
 
 from pathlib import Path
-from pytest_bdd import scenario, scenarios, given, when, then
+from pytest_bdd import scenarios, given, when, then
 
 feature_file_dir = 'my_features'
 feature_file = 'fixture.feature'

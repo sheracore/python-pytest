@@ -42,7 +42,7 @@ def final_balance():
 #     pass
 
 
-@given('A set of 3 fruits', target_fixture="my_set")
+@given('A set of 3 fruits', target_fixture='my_set')
 def current_balance():
     return {"apple", "banana", "cherry"}
 
@@ -53,6 +53,6 @@ def remove_fruit(my_set):
     print(my_set)
 
 
-@then('the set should have 5 elements')
+@then('the set will have 2 fruits')
 def final_set(my_set):
     assert len(my_set) == 2
